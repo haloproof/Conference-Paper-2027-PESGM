@@ -1,0 +1,15 @@
+# Direct runtime, plotting and bounded-audit dependencies.
+# Tested on Python 3.12.13 / Windows; research torch build: 2.14.0+cu130.
+# torch==2.14.0 pins the release; the platform-specific build may differ.
+simses==2.1.1
+coptpy==8.0.7
+torch==2.14.0
+numpy==2.5.3
+scipy==1.18.1
+pandas==3.0.5
+tzdata==2026.4
+matplotlib==3.11.2
+pypdf==6.19.0
+pytest==9.1.1
+pytest-timeout==2.4.0
+setuptools==84.0.0

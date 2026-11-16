@@ -1,0 +1,23 @@
+{
+  "base_config": "benchmark-m0-da-base.json",
+  "kind": "smoke",
+  "smoke_intervals": 4,
+  "mpc": {
+    "horizon_intervals": 2,
+    "execute_intervals": 2
+  },
+  "solver": {
+    "max_seconds": 2,
+    "node_limit": 10,
+    "relative_gap": 1e-8
+  },
+  "limits": {
+    "max_seconds": 30,
+    "max_steps": 720,
+    "max_queries": 3,
+    "segment_seconds": 5
+  },
+  "scenario": {
+    "max_days": 1
+  }
+}

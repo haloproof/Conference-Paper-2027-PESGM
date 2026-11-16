@@ -1,0 +1,6 @@
+{
+  "basis": "Frozen UTC blocks after explicit source-timezone localization; no overlapping prediction windows across blocks",
+  "development": ["2025-08-31T22:00:00Z", "2026-01-01T00:00:00Z"],
+  "validation": ["2026-01-01T00:00:00Z", "2026-03-01T00:00:00Z"],
+  "test": ["2026-03-01T00:00:00Z", "2026-08-31T22:00:00Z"]
+}

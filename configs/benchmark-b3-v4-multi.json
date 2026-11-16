@@ -1,0 +1,75 @@
+{
+  "kind": "production",
+  "method": "b3-v4",
+  "seed": 20261020,
+  "teacher": {
+    "series": 100,
+    "parallel": 10,
+    "initial_soc": 0.5,
+    "initial_temperature_c": 25,
+    "soc_min": 0,
+    "soc_max": 1,
+    "temperature_min_c": 0,
+    "temperature_max_c": 50,
+    "internal_dt_s": 10,
+    "cooling_area_fraction": 0.5,
+    "eta_charge": 0.96,
+    "eta_discharge": 0.96,
+    "dc_power_kw": 9.6,
+    "power_tolerance_kw": 0.05,
+    "terminal_soc_tolerance": null,
+    "report_only": true
+  },
+  "mpc": {
+    "soc_min": 0.1,
+    "soc_max": 0.9,
+    "horizon_intervals": 96,
+    "execute_intervals": 96,
+    "day_end_soc": null,
+    "dt_h": 0.25,
+    "eta_charge": 0.91,
+    "eta_discharge": 0.97,
+    "ambient_c": 25
+  },
+  "solver": {
+    "max_seconds": 30,
+    "startup_seconds": 60,
+    "return_reserve_seconds": 0.5,
+    "subproblem_seconds": 1,
+    "threads": 1,
+    "max_main_steps": 200,
+    "max_evaluations": 1000,
+    "backtracks": 8,
+    "initial_step_fraction": 0.05,
+    "armijo": 0.0001,
+    "feasibility_tolerance": 1e-07,
+    "zero_tolerance_kw": 1e-06,
+    "improvement_eur": 1e-07,
+    "progress_eur": 1e-07
+  },
+  "economics": {
+    "cell_eur_per_kwh": 135,
+    "installed_eur_per_kwh": 300,
+    "fec_eol": 6000,
+    "eol_soh": 0.8
+  },
+  "aging": {
+    "kappa_eur_per_pu": 6480,
+    "scaled": true,
+    "reference_soh": 0.95
+  },
+  "limits": {
+    "max_seconds": 604800,
+    "max_steps": 100000000,
+    "max_queries": 10000,
+    "segment_seconds": 180
+  },
+  "scenario": {
+    "start_utc": "2025-08-31T22:00:00Z",
+    "max_days": 2920,
+    "price_scenario": "repeat_history_year",
+    "repeat_start_utc": "2025-08-31T22:00:00Z",
+    "repeat_end_utc": "2026-08-31T22:00:00Z"
+  },
+  "algorithm": "b3-v4"
+}

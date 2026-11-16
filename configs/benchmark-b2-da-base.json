@@ -1,0 +1,65 @@
+{
+  "kind": "production",
+  "method": "B2-DA",
+  "seed": 20261004,
+  "teacher": {
+    "series": 100,
+    "parallel": 10,
+    "initial_soc": 0.5,
+    "initial_temperature_c": 25,
+    "soc_min": 0,
+    "soc_max": 1,
+    "temperature_min_c": 0,
+    "temperature_max_c": 50,
+    "internal_dt_s": 10,
+    "cooling_area_fraction": 0.5,
+    "eta_charge": 0.96,
+    "eta_discharge": 0.96,
+    "power_kw": 4,
+    "dc_power_kw": 9.6,
+    "power_tolerance_kw": 0.05,
+    "terminal_soc_tolerance": null
+  },
+  "mpc": {
+    "soc_min": 0.1,
+    "soc_max": 0.9,
+    "horizon_intervals": 96,
+    "execute_intervals": 96,
+    "day_end_soc": null,
+    "dt_h": 0.25,
+    "eta_charge": 0.91,
+    "eta_discharge": 0.97,
+    "ambient_c": 25
+  },
+  "solver": {
+    "backend": "copt",
+    "max_seconds": 25,
+    "node_limit": 100000,
+    "threads": 1,
+    "relative_gap": 0.025,
+    "absolute_gap_eur": 1e-8
+  },
+  "economics": {
+    "cell_eur_per_kwh": 135,
+    "installed_eur_per_kwh": 300,
+    "fec_eol": 6000,
+    "eol_soh": 0.8
+  },
+  "limits": {
+    "max_seconds": 604800,
+    "max_steps": 100000000,
+    "max_queries": 10000,
+    "segment_seconds": 120
+  },
+  "scenario": {
+    "start_utc": "2025-08-31T22:00:00Z",
+    "max_days": 30,
+    "price_scenario": "historical"
+  },
+  "aging": {
+    "scaled": true,
+    "reference_soh": 0.95,
+    "block_intervals": 16,
+    "kappa_eur_per_pu": 6480
+  }
+}

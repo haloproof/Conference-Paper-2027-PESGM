@@ -1,0 +1,38 @@
+{
+  "description": "Fixed publication typography for Figures 2-5. Sizes are TeX pt at the IEEEtran single-column width, not unscaled PDF canvas sizes.",
+  "template": {
+    "body_font_pt": 10,
+    "column_width_tex_pt": 252,
+    "tex_points_per_inch": 72.27
+  },
+  "font": {
+    "family": "Times New Roman",
+    "fallback": "DejaVu Serif",
+    "caption_pt": 9,
+    "caption_baseline_pt": 10.8,
+    "axis_label_pt": 9,
+    "legend_pt": 8,
+    "tick_label_pt": 8,
+    "panel_title_pt": 9,
+    "annotation_pt": 8
+  },
+  "canvas_width_inches": 8,
+  "figure_aspect_ratio": {
+    "fig2": [
+      4,
+      2
+    ],
+    "fig3": [
+      4,
+      3
+    ],
+    "fig4": [
+      4,
+      3
+    ],
+    "fig5": [
+      4,
+      3
+    ]
+  }
+}

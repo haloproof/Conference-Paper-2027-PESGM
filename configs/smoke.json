@@ -1,0 +1,25 @@
+{
+  "kind": "smoke", "seed": 20260917,
+  "teacher": {
+    "series": 100, "parallel": 10,
+    "initial_soc": 0.5, "initial_temperature_c": 25.0,
+    "soc_min": 0.1, "soc_max": 0.9,
+    "temperature_min_c": 0.0, "temperature_max_c": 50.0,
+    "internal_dt_s": 10.0, "cooling_area_fraction": 0.5,
+    "eta_charge": 0.96, "eta_discharge": 0.96,
+    "power_kw": 4.0, "power_tolerance_kw": 0.00001,
+    "terminal_soc_tolerance": 0.025
+  },
+  "data": {"groups": 3, "horizon": 6, "dt_h": 0.016666666666666666,
+    "history_intervals": 1, "amplitude_kw": 1.0, "epsilons": [0.02],
+    "temperatures_c": [25.0], "train_fraction": 0.6, "validation_fraction": 0.2},
+  "model": {"hidden": 8, "batch_size": 2, "epochs": 1, "lr": 0.001,
+    "lambda_state": 1.0, "lambda_damage": 1.0, "lambda_sensitivity": 1.0},
+  "dispatch": {"horizon": 6, "max_windows": 1, "solver_iterations": 8,
+    "trust_iterations": 1, "initial_radius_kw": 0.5, "minimum_radius_kw": 0.01,
+    "accept_ratio": 0.1, "prediction_tolerance_eur": 0.000001,
+    "kappa_eur_per_pu": 14400.0, "throughput_eur_per_kwh": 0.02,
+    "local_updates": 0, "local_lr": 0.0001, "teacher_queries_per_window": 3,
+    "ambient_c": 25.0},
+  "limits": {"max_seconds": 50, "max_steps": 1000, "max_queries": 3}
+}

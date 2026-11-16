@@ -1,0 +1,93 @@
+{
+  "signature": {
+    "config": {
+      "kind": "production",
+      "seed": 1016,
+      "teacher": {
+        "series": 100,
+        "parallel": 10,
+        "initial_soc": 0.5,
+        "initial_temperature_c": 25,
+        "soc_min": 0.1,
+        "soc_max": 0.9,
+        "temperature_min_c": 0,
+        "temperature_max_c": 50,
+        "internal_dt_s": 10,
+        "cooling_area_fraction": 0.5,
+        "eta_charge": 0.96,
+        "eta_discharge": 0.96,
+        "power_kw": 9.6,
+        "power_tolerance_kw": 0.05,
+        "terminal_soc_tolerance": null,
+        "report_only": true
+      },
+      "data": {
+        "groups": 30,
+        "history_max_intervals": 1401600,
+        "save_every_intervals": 96,
+        "dt_h": 0.25,
+        "branch_intervals": 192,
+        "ambient_c": 25
+      },
+      "training": {
+        "stage1": {
+          "lr": 0.001,
+          "batch_size": 256,
+          "epochs": 200,
+          "patience": 20
+        },
+        "stage2": {
+          "lr": 0.0001,
+          "batch_size": 16,
+          "local_batch_size": 256,
+          "epochs": 100,
+          "patience": 15
+        },
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "adam_eps": 1e-08,
+        "weight_decay": 0,
+        "weights": [
+          0.1,
+          1,
+          1
+        ],
+        "epsilon_calendar": 1e-06,
+        "min_relative_improvement": 0.0001,
+        "max_stage_seconds": 7200,
+        "threads": 1
+      }
+    },
+    "command": "hybrid-train",
+    "inputs": {
+      "dataset": "2ba23a877a4720b1a0a75d38ed289afc7bd4ab4d9a2d102be9b0ccfac39995d3"
+    },
+    "source_hash": "3175911c86d51f8e21b34cc2d1e041d2414328d5bddf2fe840d9800d94bf7652"
+  },
+  "environment": {
+    "python": "3.12.13 (main, Mar 20 2026, 00:36:00) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\hpf\\Desktop\\论文\\degradation-aware dispatch\\.venv\\Scripts\\python.exe",
+    "simses_path": "C:\\Users\\hpf\\Desktop\\论文\\degradation-aware dispatch\\.venv\\Lib\\site-packages\\simses\\__init__.py",
+    "versions": {
+      "simses": "2.1.1",
+      "torch": "2.14.0+cu130",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pandas": "3.0.5",
+      "coptpy": "8.0.7"
+    },
+    "platform": "Windows-11-10.0.26100-SP0",
+    "cpu": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5060 Ti"
+  },
+  "run_id": "hybrid-fit-1020",
+  "created": 1792464570.3879678,
+  "initial_work_limits": {
+    "max_seconds": 7200,
+    "max_steps": 10000000,
+    "max_queries": 1000
+  }
+}

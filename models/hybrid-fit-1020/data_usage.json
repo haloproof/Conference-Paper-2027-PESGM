@@ -1,0 +1,10 @@
+{
+  "training_days": 640,
+  "validation_days": 160,
+  "training_curtailed_intervals": 0,
+  "validation_curtailed_intervals": 0,
+  "policy": "retain all labels with command inputs; never replace by delivered power",
+  "normalization": "training only",
+  "test_used_for_selection": false,
+  "precision": "float64"
+}

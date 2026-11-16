@@ -1,0 +1,4 @@
+{
+  "base_config": "benchmark-b1-da-base.json",
+  "scenario": {"max_days": 365, "price_scenario": "historical"}
+}

@@ -1,0 +1,5 @@
+{
+  "best": "stage2-best.pt",
+  "sha256": "371ade514bfbb48201977bffb966462384727ace42ec23e806baae1993e7df0d",
+  "scope": "trained model; independent power-gradient and test-set evaluations not executed by this command"
+}
